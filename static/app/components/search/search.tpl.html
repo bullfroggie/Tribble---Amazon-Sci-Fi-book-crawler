@@ -1,0 +1,108 @@
+<div class="jumbotron content">
+    <div class="container">
+        <h1 class="ml11 text-center">
+            <span class="text-wrapper">
+                <span class="letters">Photon</span>
+                <span class="line line1"></span>
+            </span>
+            <small class="lead text-center"
+                >Fastest Way To Find Tech Deals <i class="fas fa-rocket"></i
+            ></small>
+        </h1>
+
+        <form>
+            <div class="form-group col-md-6 mx-auto">
+                <input
+                    type="text"
+                    class="form-control text-center"
+                    placeholder="What are you looking for?"
+                    required
+                />
+            </div>
+        </form>
+        <p class="text-center">
+            <a class="btn btn-primary btn" href="#" role="button">Search</a>
+        </p>
+    </div>
+</div>
+<br />
+<div class="container">
+    <div class="card-deck">
+        <div class="card result">
+            <img src="..." class="card-img-top" alt="..." />
+            <div class="card-body">
+                <h5 class="card-title">Card title</h5>
+                <p class="card-text">
+                    This is a longer card with supporting text below as a natural lead-in to
+                    additional content. This content is a little bit longer.
+                </p>
+                <p class="card-text"><small class="text-muted">Last updated 3 mins ago</small></p>
+            </div>
+        </div>
+        <div class="card result">
+            <img src="..." class="card-img-top" alt="..." />
+            <div class="card-body">
+                <h5 class="card-title">Card title</h5>
+                <p class="card-text">
+                    This card has supporting text below as a natural lead-in to additional content.
+                </p>
+                <p class="card-text"><small class="text-muted">Last updated 3 mins ago</small></p>
+            </div>
+        </div>
+        <div class="card result">
+            <img src="..." class="card-img-top" alt="..." />
+            <div class="card-body">
+                <h5 class="card-title">Card title</h5>
+                <p class="card-text">
+                    This is a wider card with supporting text below as a natural lead-in to
+                    additional content. This card has even longer content than the first to show
+                    that equal height action.
+                </p>
+                <p class="card-text"><small class="text-muted">Last updated 3 mins ago</small></p>
+            </div>
+        </div>
+    </div>
+</div>
+
+<script type="text/javascript">
+    var textWrapper = document.querySelector(".ml11 .letters");
+    textWrapper.innerHTML = textWrapper.textContent.replace(
+        /([^\x00-\x80]|\w)/g,
+        "<span class='letter'>$&</span>"
+    );
+
+    anime
+        .timeline({ loop: true })
+        .add({
+            targets: ".ml11 .line",
+            scaleY: [0, 1],
+            opacity: [0.5, 1],
+            easing: "easeOutExpo",
+            duration: 700
+        })
+        .add({
+            targets: ".ml11 .line",
+            translateX: [
+                0,
+                document.querySelector(".ml11 .letters").getBoundingClientRect().width + 10
+            ],
+            easing: "easeOutExpo",
+            duration: 700,
+            delay: 100
+        })
+        .add({
+            targets: ".ml11 .letter",
+            opacity: [0, 1],
+            easing: "easeOutExpo",
+            duration: 600,
+            offset: "-=775",
+            delay: (el, i) => 34 * (i + 1)
+        })
+        .add({
+            targets: ".ml11",
+            opacity: 0,
+            duration: 1000,
+            easing: "easeOutExpo",
+            delay: 5000
+        });
+</script>
