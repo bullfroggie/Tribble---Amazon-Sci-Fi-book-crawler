@@ -1,6 +1,10 @@
 from flask import Flask
 
+from blueprints.search import search
+
 app = Flask(__name__, static_url_path="")
+
+app.register_blueprint(search, url_prefix="/api")
 
 
 @app.route("/")
