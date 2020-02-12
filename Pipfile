@@ -4,6 +4,12 @@ verify_ssl = true
 name = "pypi"
 
 [packages]
+Flask = "*"
+Scrapy = "*"
+scrapyrt = "*"
+gunicorn = "*"
+requests = "*"
+scrapy-user-agents = "*"
 flask = "*"
 scrapy = "*"
 

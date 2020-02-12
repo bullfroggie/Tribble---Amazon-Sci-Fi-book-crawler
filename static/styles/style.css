@@ -1,18 +1,35 @@
 @import url("https://fonts.googleapis.com/css?family=Open+Sans&display=swap");
 
 #background {
-    background-color: #1d1d1d !important;
+    background-color: #121212 !important;
     font-family: "Open Sans", sans-serif;
 }
 
 .content {
-    background-color: #1d1d1d !important;
+    background-color: #121212 !important;
     color: #ffffff !important;
 }
 
+.search-bar {
+    background-color: #38383d !important;
+    border: none !important;
+    color: #a1a1a1 !important;
+}
+
 .result {
-    background-color: #373737 !important;
+    background-color: #38383d !important;
     color: white;
+}
+
+.dont-wrap {
+    text-overflow: ellipsis;
+    white-space: nowrap;
+    overflow: hidden;
+}
+
+.deal-image {
+    width: 170px !important;
+    height: 227px !important;
 }
 
 .ml11 {
