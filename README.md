@@ -1,3 +1,3 @@
 # Photon Tech Deal Search
 
-Currently in development
+Web Crawler for finding top three Sci-Fi book deals on Amazon.
